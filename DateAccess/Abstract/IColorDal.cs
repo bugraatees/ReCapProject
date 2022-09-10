@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace DateAccess.Abstract
 {
-    public interface ICarDal : IEntityRepository<Car>
+    public interface IColorDal : IEntityRepository<Color>
     {
      
-
-
-
-
     }
 }
