@@ -26,11 +26,25 @@ namespace Business.Concrete
         {
             return _carDal.GetCarsByColorId(id);
         }
+        
 
 
         public List<Car> GetAll()
         {
             return _carDal.GetAll();
+        }
+
+        public void Add(Car car)
+        {
+            if (car.Description.Length>2 && car.DailyPrice>0)
+            {
+               _carDal.Add(car);
+                Console.WriteLine("Eklendi..");
+            }
+            else
+            {
+                Console.WriteLine("Eklenemedi");
+            }
         }
     }
 }
